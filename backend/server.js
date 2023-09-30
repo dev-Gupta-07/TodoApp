@@ -15,12 +15,12 @@ app.use("/api/user", userRoute);
 app.use("/api/do", todoRoute);
 
 const __dirname1=path.resolve();
-
+console.log(__dirname1)
 if(process.env.NODE_ENV==="development")
 {
-   app.use(express.static(path.join(__dirname1,"../frontend/to-do-app/build")))
+   app.use(express.static(path.join(__dirname1,"/frontend/build")))
    app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname1,"../frontend","to-do-app","build","index.html"))
+    res.sendFile(path.resolve(__dirname1,"/frontend","build","index.html"))
    });
 }
 else
