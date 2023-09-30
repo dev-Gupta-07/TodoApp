@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install && cd ../frontend/to-do-app && npm install && npm run build && cd ../../backend"
   },
   "author": "Dev",
   "license": "ISC",
